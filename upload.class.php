@@ -1,13 +1,13 @@
 <?php
 
 /**
- *  Ôðàãìåíò php-êîäà.
+ *  Ð¤Ñ€Ð°Ð³Ð¼ÐµÐ½Ñ‚ php-ÐºÐ¾Ð´Ð°.
  *
- *  ×àñòü ñåðâèñà, ðàáîòàþùåãî ñ RSS ïîäïèñêàìè, 
- *  èñïîëüçóþùåãî API Google äëÿ ïîèñêà êàðòèíîê,
- *  îòïðàâëÿþùåãî ôàéëû íà radikal.ru, video.yandex.ru,
- *  íà ôàéëîâûå õîñòèíãè.
- *  Ôîðìèðóåò íîâîñòü è ïîñòèò íà dle-ñàéòû.
+ *  Ð§Ð°ÑÑ‚ÑŒ ÑÐµÑ€Ð²Ð¸ÑÐ°, Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ñ RSS Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÐ°Ð¼Ð¸, 
+ *  Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÑŽÑ‰ÐµÐ³Ð¾ API Google Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ð¾Ðº,
+ *  Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÑŽÑ‰ÐµÐ³Ð¾ Ñ„Ð°Ð¹Ð»Ñ‹ Ð½Ð° radikal.ru, video.yandex.ru,
+ *  Ð½Ð° Ñ„Ð°Ð¹Ð»Ð¾Ð²Ñ‹Ðµ Ñ…Ð¾ÑÑ‚Ð¸Ð½Ð³Ð¸.
+ *  Ð¤Ð¾Ñ€Ð¼Ð¸Ñ€ÑƒÐµÑ‚ Ð½Ð¾Ð²Ð¾ÑÑ‚ÑŒ Ð¸ Ð¿Ð¾ÑÑ‚Ð¸Ñ‚ Ð½Ð° dle-ÑÐ°Ð¹Ñ‚Ñ‹.
  *  31.07.11
  */
 
@@ -140,8 +140,8 @@ $this->Log( "CheckDirSizeDel: Dir deleted" );
       while ( $aRss = $ee->oDb->Fetch( $hQRss ) )
       {
          // FIX
-         // Óáåäèìñÿ, ÷òî òàêîãî ïîñòà åùå íåò.
-         // Ðàññìàòðèâàþòñÿ 5 äíåé
+         // Ð£Ð±ÐµÐ´Ð¸Ð¼ÑÑ, Ñ‡Ñ‚Ð¾ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ Ð¿Ð¾ÑÑ‚Ð° ÐµÑ‰Ðµ Ð½ÐµÑ‚.
+         // Ð Ð°ÑÑÐ¼Ð°Ñ‚Ñ€Ð¸Ð²Ð°ÑŽÑ‚ÑÑ 5 Ð´Ð½ÐµÐ¹
          $hQPost = $ee->oDb->Query( 
            "SELECT COUNT(*) AS cnt
             FROM {$ee->aCfg['db_prefix']}posts 
@@ -738,7 +738,7 @@ $this->Log( "UploadFile: '{$sFilePath}' uploaded to " . count($aResult) . " host
          else
             $sFHName = $k;
 
-         $sUrls .= "[url={$sUrl}]Ñêà÷àòü ñ {$sFHName}[/url]\n";
+         $sUrls .= "[url={$sUrl}]Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ Ñ {$sFHName}[/url]\n";
       }
 
       if ( $sUrls != '' )
@@ -796,7 +796,7 @@ $this->Log( "UploadFile: '{$sFilePath}' uploaded to " . count($aResult) . " host
            'allow_rating' => '1',
            'do'           => 'addnews',
            'mod'          => 'addnews',
-           'add'          => 'îòïðàâèòü'
+           'add'          => 'Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ'
          );
 
          $bPost = $ee->oSubmitter->PostNews( $aCats, $aPost );
@@ -1019,7 +1019,7 @@ $this->Log( "UploadFile: '{$sFilePath}' uploaded to " . count($aResult) . " host
                else
                   $sFHName = $k;
 
-               $sUrls .= "[url={$sUrl}]Ñêà÷àòü ñ {$sFHName}[/url]\n";
+               $sUrls .= "[url={$sUrl}]Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ Ñ {$sFHName}[/url]\n";
             }
          }
 
@@ -1067,7 +1067,7 @@ $this->Log( "UploadFile: '{$sFilePath}' uploaded to " . count($aResult) . " host
               'allow_rating' => '1',
               'do'           => 'addnews',
               'mod'          => 'addnews',
-              'add'          => 'îòïðàâèòü'
+              'add'          => 'Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ'
             );
 
             $bPost = $ee->oSubmitter->PostNews( $aCats, $aPost );
